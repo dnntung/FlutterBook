@@ -15,12 +15,19 @@ class AppointmentsList extends StatelessWidget {
       Appointment appointment = appointmentsModel.entityList[i];
       List dateParts = appointment.apptDate.split(",");
       DateTime apptDate = DateTime(
-          int.parse(dateParts[0]), int.parse(dateParts[1]),
-          int.parse(dateParts[2]));
-      _markedDateMap.add(apptDate, Event(date: apptDate,
-          icon: Container(decoration: BoxDecoration(
-              color: Colors.blue))
-      ));
+          int.parse(dateParts[0]),
+          int.parse(dateParts[1]),
+          int.parse(dateParts[2])
+      );
+      _markedDateMap.add(
+          apptDate,
+          Event(date: apptDate,
+          icon: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue)
+              )
+          )
+      );
     }
     return ScopedModel<AppointmentsModel>(
         model : appointmentsModel,
