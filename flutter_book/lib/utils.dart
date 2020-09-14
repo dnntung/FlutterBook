@@ -4,7 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:intl/intl.dart';
 import 'BaseModel.dart';
 
-Directory docDir;
+Directory docsDir;
 
 Future selectDate(
   BuildContext inContext, BaseModel inModel,
