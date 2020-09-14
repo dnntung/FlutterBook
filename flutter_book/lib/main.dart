@@ -7,17 +7,18 @@ import 'notes/Notes.dart';
 import 'tasks/Tasks.dart';
 import 'utils.dart' as utils;
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   startMeUp() async{
     Directory docsDir= await getApplicationDocumentsDirectory();
     utils.docsDir=docsDir;
     runApp(FlutterBook());
-
   }
+  startMeUp();
 }
 
 class FlutterBook extends StatelessWidget {
   // This widget is the root of your application.
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home:DefaultTabController(
