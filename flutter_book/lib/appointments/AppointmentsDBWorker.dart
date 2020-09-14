@@ -22,7 +22,7 @@ class AppointmentsDBWorker{
         path, version: 1, onOpen: (db){},
         onCreate: (Database inDB, int inVersion) async{
           await inDB.execute(
-              "CREATE TABLE IF NOT EXISTS appointment("
+              "CREATE TABLE IF NOT EXISTS appointments("
                   "id INTEGER PRIMARY KEY,"
                   "title TEXT,"
                   "description TEXT,"
