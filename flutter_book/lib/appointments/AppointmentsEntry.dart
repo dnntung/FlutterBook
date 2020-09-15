@@ -6,21 +6,21 @@ import '../utils.dart' as utils;
 
 class AppointmentsEntry extends StatelessWidget {
   final TextEditingController _titleEditingController = TextEditingController();
-  final TextEditingController _contentEditingController = TextEditingController();
+  final TextEditingController _descriptionEditingController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   AppointmentsEntry() {
     _titleEditingController.addListener(() {
       appointmentsModel.entityBeingEdited.title = _titleEditingController.text;
     });
-    _contentEditingController.addListener(() {
-      appointmentsModel.entityBeingEdited.content = _contentEditingController.text;
+    _descriptionEditingController.addListener(() {
+      appointmentsModel.entityBeingEdited.description = _descriptionEditingController.text;
     });
   }
 
   Widget build(BuildContext inContext) {
     _titleEditingController.text = appointmentsModel.entityBeingEdited.title;
-    _contentEditingController.text = appointmentsModel.entityBeingEdited.content;
+    _descriptionEditingController.text = appointmentsModel.entityBeingEdited.description;
     return ScopedModel(
         model: appointmentsModel,
         child: ScopedModelDescendant<AppointmentsModel>(
@@ -68,7 +68,7 @@ class AppointmentsEntry extends StatelessWidget {
                                     keyboardType : TextInputType.multiline,
                                     maxLines : 8,
                                     decoration : InputDecoration(hintText : "Description"),
-                                    controller : _contentEditingController,
+                                    controller : _descriptionEditingController,
                                     validator : (String inValue) {
                                       if (inValue.length == 0) {
                                         return "Please enter Description";
@@ -89,10 +89,10 @@ class AppointmentsEntry extends StatelessWidget {
                                     onPressed: () async{
                                       String chosenDate = await utils.selectDate(
                                           inContext, appointmentsModel,
-                                          appointmentsModel.entityBeingEdited.dueDate
+                                          appointmentsModel.entityBeingEdited.apptDate
                                       );
                                       if (chosenDate != null){
-                                        appointmentsModel.entityBeingEdited.dueDate = chosenDate;
+                                        appointmentsModel.entityBeingEdited.apptDate = chosenDate;
                                       }
                                     }
                                 )
