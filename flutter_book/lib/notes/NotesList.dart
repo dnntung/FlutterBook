@@ -108,6 +108,7 @@ class NotesList extends StatelessWidget {
                       content: Text("Note deleted")
                     )
                   );
+                  notesModel.loadData("notes", NotesDBWorker.db);
                 }
             )
           ],

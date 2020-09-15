@@ -119,6 +119,7 @@ class TasksList extends StatelessWidget {
                             content: Text("Task deleted")
                         )
                     );
+                    tasksModel.loadData("tasks", TasksDBWorker.db);
                   }
               )
             ],

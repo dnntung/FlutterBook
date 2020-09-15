@@ -210,6 +210,7 @@ class AppointmentsList extends StatelessWidget {
                             content: Text("Appointment deleted")
                         )
                     );
+                    appointmentsModel.loadData("appointments", AppointmentsDBWorker.db);
                   }
               )
             ],
