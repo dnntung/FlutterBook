@@ -87,7 +87,7 @@ class TasksDBWorker{
 
   Future update(Task inTask) async {
     Database db = await database;
-    return await db.update("notes", taskToMap(inTask),
+    return await db.update("tasks", taskToMap(inTask),
         where : "id = ?", whereArgs : [ inTask.id ]
     );
   }

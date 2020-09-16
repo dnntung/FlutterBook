@@ -4,8 +4,10 @@ import "NotesDBWorker.dart";
 import "NotesModel.dart" show NotesModel, notesModel;
 
 class NotesEntry extends StatelessWidget {
-  final TextEditingController _titleEditingController = TextEditingController();
-  final TextEditingController _contentEditingController = TextEditingController();
+  final TextEditingController _titleEditingController =
+    TextEditingController();
+  final TextEditingController _contentEditingController =
+    TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   NotesEntry() {
@@ -23,7 +25,9 @@ class NotesEntry extends StatelessWidget {
     return ScopedModel(
       model: notesModel,
       child: ScopedModelDescendant<NotesModel>(
-          builder : (BuildContext inContext, Widget inChild, NotesModel inModel){
+          builder : (BuildContext inContext,
+              Widget inChild,
+              NotesModel inModel){
             return Scaffold(
               bottomNavigationBar: Padding(
                 padding : EdgeInsets.symmetric(vertical : 0, horizontal : 10),
