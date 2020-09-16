@@ -83,7 +83,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.red) +
+                                          shape : Border.all(width : 12, color : Colors.red) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "red" ?
                                                   Colors.red : Theme.of(inContext).canvasColor
@@ -100,7 +100,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.green) +
+                                          shape : Border.all(width : 12, color : Colors.green) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "green" ?
                                                   Colors.green : Theme.of(inContext).canvasColor
@@ -117,7 +117,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.blue) +
+                                          shape : Border.all(width : 12, color : Colors.blue) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "blue" ?
                                                   Colors.blue : Theme.of(inContext).canvasColor
@@ -134,7 +134,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.yellow) +
+                                          shape : Border.all(width : 12, color : Colors.yellow) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "yellow" ?
                                                   Colors.yellow : Theme.of(inContext).canvasColor
@@ -151,7 +151,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.grey) +
+                                          shape : Border.all(width : 12, color : Colors.grey) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "grey" ?
                                                   Colors.grey : Theme.of(inContext).canvasColor
@@ -168,7 +168,7 @@ class NotesEntry extends StatelessWidget {
                               GestureDetector(
                                   child : Container(
                                       decoration : ShapeDecoration(
-                                          shape : Border.all(width : 18, color : Colors.purple) +
+                                          shape : Border.all(width : 12, color : Colors.purple) +
                                               Border.all(width : 6,
                                                   color : notesModel.color == "purple" ?
                                                   Colors.purple : Theme.of(inContext).canvasColor
