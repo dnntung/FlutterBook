@@ -66,8 +66,8 @@ class ContactsDBWorker{
     }
 
     return await db.rawInsert(
-        "INSERT INTO contacts (id, title, content, color) "
-            "VALUES (?,?,?,?)",
+        "INSERT INTO contacts (id, name, email, phone, birthday) "
+            "VALUES (?,?,?,?,?)",
         [id, inContact.name, inContact.email, inContact.phone, inContact.birthday]
     );
   }

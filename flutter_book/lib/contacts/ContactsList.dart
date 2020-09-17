@@ -44,7 +44,8 @@ class ContactsList extends StatelessWidget {
                             backgroundColor: Colors.indigoAccent,
                             foregroundColor: Colors.white,
                             backgroundImage: avatarFileExists ? FileImage(avatarFile) :null,
-                            child: avatarFileExists ? null: Text(contact.name.substring(0,1).toUpperCase())
+                            child: avatarFileExists ? null:
+                              Text(contact.name.substring(0,1).toUpperCase())
                           ),
                           title: Text("${contact.name}"),
                           subtitle: contact.phone == null ? null: Text("${contact.phone}"),
@@ -114,7 +115,8 @@ class ContactsList extends StatelessWidget {
                 FlatButton(
                     child: Text("Delete"),
                     onPressed: () async {
-                      File avatarFile = File(join(utils.docsDir.path, inContact.id.toString()));
+                      File avatarFile = File(join(utils.docsDir.path,
+                          inContact.id.toString()));
                       if (avatarFile.existsSync()) {
                         avatarFile.deleteSync();
                       }
