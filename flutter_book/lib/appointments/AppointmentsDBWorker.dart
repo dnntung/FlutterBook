@@ -66,8 +66,8 @@ class AppointmentsDBWorker{
     }
 
     return await db.rawInsert(
-        "INSERT INTO appointments (id, title, content, color) "
-            "VALUES (?,?,?,?)",
+        "INSERT INTO appointments (id, title, description, apptDate, apptTime) "
+            "VALUES (?,?,?,?,?)",
         [id, inAppointment.title, inAppointment.description, inAppointment.apptDate, inAppointment.apptTime]
     );
   }
